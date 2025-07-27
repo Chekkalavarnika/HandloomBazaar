@@ -2,6 +2,7 @@
 
 
 🌐 **Live Site**: [handloombazaar.netlify.app](https://handloombazaar.netlify.app/)
+
 **Handloom Bazaar** is a web application designed to bridge the gap between **traditional weavers** and **modern customers**. It serves as a marketplace where weavers can directly showcase and sell their handmade items, while customers can browse, purchase, and communicate with weavers — all without intermediaries.
 
 ---
