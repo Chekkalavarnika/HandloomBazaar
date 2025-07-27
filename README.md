@@ -1,5 +1,5 @@
 # Handloom Bazaar
-#Handloom Bazaar is a web application designed to bridge the gap between traditional weavers and modern customers. It serves as a marketplace where weavers can directly showcase and sell their handmade items, while customers can browse, purchase, and communicate with weavers without intermediaries.
+Handloom Bazaar is a web application designed to bridge the gap between traditional weavers and modern customers. It serves as a marketplace where weavers can directly showcase and sell their handmade items, while customers can browse, purchase, and communicate with weavers without intermediaries.
 
 🌐 Features
 🧶  Weaver Interface
