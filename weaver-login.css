@@ -1,0 +1,60 @@
+body.weaver-login-body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fdf0e6, #f9dede);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background: #fffaf0;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(200, 150, 100, 0.3);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    color: #b76e79;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #e07b7b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #c76767;
+  }
+  
+  .register-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .register-link a {
+    color: #b76e79;
+    text-decoration: none;
+  }
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  

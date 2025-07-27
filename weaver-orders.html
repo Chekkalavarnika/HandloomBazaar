@@ -1,0 +1,53 @@
+<!-- weaver_orders.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weaver Orders</title>
+</head>
+<body>
+  <h2>My Orders</h2>
+  <ul id="orderList"></ul>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getFirestore, collection, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyD-QFUPwBIQahsJ7m14dRyS22Ul4pPZ_hI",
+    authDomain: "minip-231d9.firebaseapp.com",
+    projectId: "minip-231d9",
+    storageBucket: "minip-231d9.firebasestorage.app",
+    messagingSenderId: "211049156926",
+    appId: "1:211049156926:web:37bbc513def8ee7bf01c6f",
+    measurementId: "G-M71M8B6ZJK"
+  };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const weaverId = "weaver456"; // Replace with logged-in weaver ID
+
+    const orderList = document.getElementById("orderList");
+    const ordersQuery = query(collection(db, "orders"), where("weaverId", "==", weaverId));
+
+    onSnapshot(ordersQuery, (snapshot) => {
+      orderList.innerHTML = "";
+      if (snapshot.empty) {
+        orderList.innerHTML = "<li>No orders found.</li>";
+      } else {
+        snapshot.forEach((doc) => {
+          const order = doc.data();
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <strong>${order.buyerName}</strong> ordered 
+            <em>${order.productName}</em> to <br>
+            Address: ${order.address}<br>
+            Phone: ${order.phone}<br>
+            Payment: ${order.paymentOption}<br><br>
+          `;
+          orderList.appendChild(li);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

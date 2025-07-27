@@ -1,0 +1,12 @@
+{
+    "hosting": {
+      "site": "handloom-9c24e-36e9a",
+      "public": "C:/MiniPro",  
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  }
+  

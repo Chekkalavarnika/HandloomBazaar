@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Details - Handloom Bazaar</title>
+  <link rel="stylesheet" href="product-details.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="product-info">
+      <img id="product-image" alt="Product Image" />
+      <h2 id="product-name"></h2>
+      <p id="product-price"></p>
+      <p id="product-description"></p>
+      <p id="product-category"></p>
+    </div>
+
+    <div class="weaver-info">
+      <h3>About the Weaver</h3>
+      <p><strong>Name:</strong> <span id="weaver-name"></span></p>
+      <p><strong>Email:</strong> <span id="weaver-email"></span></p>
+      <p><strong>Phone:</strong> <span id="weaver-phone"></span></p>
+
+      <button onclick="addToCart()">🛒 Add to Cart</button>
+      <button id="chat-toggle-btn">💬 Chat with Weaver</button>
+      <button onclick="placeOrder()">✅ Place Order</button>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chat-box" style="display: none; margin-top: 20px;">
+      <h3>Chat with Weaver</h3>
+      <div id="chat-messages" style="border: 1px solid #ccc; height: 200px; overflow-y: auto; padding: 10px; background-color: #f9f9f9;"></div>
+      <input type="text" id="chat-input" placeholder="Type your message..." />
+      <button onclick="sendMessageToWeaver()">Send</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handloom Bazaar - Home</title>
+  <link rel="stylesheet" href="buyer-home.css" />
+</head>
+<body class="buyer-page">
+  <header>
+    <h1>🧵 Handloom Bazaar</h1>
+    <p>Explore beautiful handloom products directly from weavers!</p>
+
+    <div class="search-filter-bar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="🔍 Search products by name..."
+        oninput="searchProducts()"
+      />
+
+      <div class="filter-buttons">
+        <button onclick="filterProducts('All')">All</button>
+        <button onclick="filterProducts('Kalamkari')">Kalamkari</button>
+        <button onclick="filterProducts('Pochampally')">Pochampally</button>
+        <button onclick="filterProducts('Cotton')">Cotton</button>
+        <button onclick="filterProducts('Silk')">Silk</button>
+        <button onclick="filterProducts('Mangalgiri')">Mangalgiri</button>
+        <button onclick="filterProducts('Kanchipuram')">Kanchipuram</button>
+        <button onclick="filterProducts('Banarasi')">Banarasi</button>
+        <!-- Add more categories as needed -->
+      </div>
+      
+      
+
+      <label for="price-range">Max Price: ₹<span id="price-label">10000</span></label>
+      <input
+        type="range"
+        id="price-range"
+        min="500"
+        max="10000"
+        step="500"
+        value="10000"
+        oninput="updatePriceLabel(); applyFilters()"
+      />
+    </div>
+    <div style="text-align: right; margin-top: 10px;">
+      <a href="cart.html" class="cart-link">🛒 Cart</a>
+    </div>
+    
+  </header>
+
+  <main>
+    <section class="product-catalog">
+      <h2>🧺 Available Products</h2>
+      <div id="product-list" class="product-grid">
+        <!-- Products will be rendered here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Handloom Bazaar | Promoting Rural Craftsmanship</p>
+  </footer>
+
+  <script src="buyer-home.js"></script>
+</body>
+</html>

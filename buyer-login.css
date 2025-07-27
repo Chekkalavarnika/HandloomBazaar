@@ -1,0 +1,97 @@
+/* Background and Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('banner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Login Box */
+  .login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    width: 320px;
+    text-align: center;
+  }
+  
+  /* Headings */
+  .login-container h2 {
+    color: #b44c00;
+    margin-bottom: 10px;
+  }
+  
+  .login-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Fields */
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #b44c00;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  /* Button */
+  button {
+    width: 95%;
+    padding: 10px;
+    background-color: #b44c00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8e3a00;
+  }
+  
+  /* Link */
+  a {
+    color: #b44c00;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .category-section {
+    margin-bottom: 40px;
+  }
+  
+  .category-section h2 {
+    margin-bottom: 10px;
+    color: #b44c00;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #fff8f2;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  }
+  

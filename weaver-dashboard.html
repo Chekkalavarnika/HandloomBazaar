@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weaver Dashboard - Handloom Bazaar</title>
+  <link rel="stylesheet" href="weaver-dashboard.css" />
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-container">
+    <h2>👋 Welcome, Weaver</h2>
+
+    <!-- Add New Product Section -->
+    <section class="add-product-section">
+      <h3>➕ Add New Product</h3>
+      <select id="product-category" required>
+        <option value="">Select Category</option>
+        <option value="Kalamkari">Kalamkari</option>
+        <option value="Pochampally">Pochampally</option>
+        <option value="Cotton">Cotton</option>
+        <option value="Silk">Silk</option>
+        <option value="Banarasi">Banarasi</option>
+        <option value="Mangalgiri">Mangalgiri</option>
+        <option value="Kanchipuram">Kanchipuram</option>
+      </select>
+      
+      <input type="text" id="product-name" placeholder="Product Name" />
+      <input type="number" id="product-price" placeholder="Price in ₹" />
+      <textarea id="product-description" placeholder="Product Description"></textarea>
+      <input type="file" id="product-image" accept="image/*" />
+      <button onclick="addProduct()">Add Product</button>
+    </section>
+    <h2>Your Orders</h2>
+    <ul id="order-list"></ul>
+    <!-- Display Weaver's Products Section -->
+    <section class="your-products">
+      <h3>🧵 Your Products</h3>
+      <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <!-- Logout Button -->
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="edit-modal">
+    <div class="modal-content">
+      <h3>Edit Product</h3>
+      <input type="text" id="edit-name" placeholder="Product Name" />
+      <input type="number" id="edit-price" placeholder="Price in ₹" />
+      <textarea id="edit-description" placeholder="Description"></textarea>
+      <input type="file" id="edit-image" accept="image/*" />
+      <button onclick="saveEdit()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Add your scripts here -->
+  <script src="weaver-dashboard.js"></script>
+</body>
+</html>

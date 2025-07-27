@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Handloom Bazaar - Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="brand-name">Handloom Bazaar</span>
+    </div>
+    <div class="nav-right">
+      <button onclick="window.location.href='orders.html'">🧾 My Orders</button>
+      <button onclick="window.location.href='cart.html'">🛒 Cart</button>
+      <button onclick="goToChat()">💬 Chat with Weaver</button>
+      <button onclick="window.location.href='index.html'">🔓 Logout</button>
+    </div>
+  </header>
+
+  <!-- Welcome Text -->
+  <section class="welcome">
+    <h1>Welcome to Handloom Bazaar</h1>
+    <p>Explore traditional handwoven sarees directly from skilled weavers.</p>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-buttons">
+      <button>Cotton Sarees</button>
+      <button>Silk Sarees</button>
+      <button>Linen Sarees</button>
+      <button>Hand-Painted</button>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <h2>🌟 Featured Products</h2>
+    <div id="product-list" class="products-grid">
+      <p>No products available yet.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Handloom Bazaar | Made with ❤️ for Tradition</p>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("currentUser");
+      window.location.href = "login.html";
+    }
+
+    function goToChat() {
+      localStorage.setItem("chatRole", "buyer");
+      window.location.href = "chat.html";
+    }
+  </script>
+</body>
+</html>
